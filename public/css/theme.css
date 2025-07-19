@@ -1,0 +1,139 @@
+/* ========================
+   GOOGLE FONT IMPORT
+======================== */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
+/* ========================
+   PAGE BACKGROUND
+======================== */
+/* To use a solid background color */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f7b17b; /* Example: warm light beige */
+  font-family: 'Bitcount Grid Double', monospace;
+  overflow: auto;
+}
+
+/* ========================
+   NAVBAR STYLING
+======================== */
+.bg-light {
+  background: linear-gradient(to right, #7e1e1e, #d2691e) !important;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #ffffff !important;
+  text-shadow: 1px 1px black;
+}
+
+.nav-link {
+  color: #f8f9fa !important;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #ffcc00 !important;
+  text-decoration: underline;
+}
+
+/* ========================
+   HEADINGS
+======================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitcount Grid Double', monospace;
+  color: maroon;
+  text-shadow: 1px 1px yellowgreen;
+}
+
+/* ========== CUSTOM HEADING BLOCKS ========== */
+h3[style*="border"] {
+  background-color: #fff8dc;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================
+   TABLE STYLES
+======================== */
+table {
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-family: 'Bitcount Grid Double', monospace;
+}
+
+.table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 5px;
+  font-family: 'Bitcount Grid Double', monospace;
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #e6ffe6;
+  color: darkgreen;
+}
+
+/* ========================
+   LISTS
+======================== */
+ol, ul {
+  padding-left: 30px;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 6px;
+  font-family: 'Bitcount Grid Double', monospace;
+}
+
+/* ========================
+   IMAGES
+======================== */
+img {
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* ========================
+   AUDIO & VIDEO
+======================== */
+audio, video {
+  margin-top: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ========================
+   PARAGRAPH TEXT
+======================== */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Bitcount Grid Double', monospace;
+}
+
+/* Optional override for muted text */
+.text-muted {
+  color: #999 !important;
+}
