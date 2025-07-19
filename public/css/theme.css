@@ -142,38 +142,64 @@ p {
 
 
 /* INPUT BUTTONS STYLES */
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 25px;
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Center the title and add spacing */
+h1 {
+  text-align: left;
+  margin-left: 190px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  
 }
 
+/* Form container alignment and spacing */
+form {
+  max-width: 600px;
+  margin-left: 52px;
+  margin-bottom: 52px;
+  padding-right: 39px;
+  padding-left: 39px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: orangered; /* light gray background */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style input fields */
 form input,
 form select {
   width: 100%;
-  padding: 10px 12px;
-  margin: 10px 0;
+  padding: 10px 2px;
+  margin-top: 8px;
+  margin-bottom: 18px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
-  box-sizing: border-box;
+  font-size: 15px;
+  background-color: #fafafa; /* softer white */
+  transition: border 0.2s ease-in-out;
 }
 
+form input:focus,
+form select:focus {
+  border-color: lightcoral;
+  outline: none;
+}
+
+/* Style the button */
 form button {
   width: 100%;
   padding: 12px;
-  background-color: #0077cc;
-  color: white;
+  background-color: beige;
+  color: orangered;
   border: none;
   border-radius: 6px;
   font-size: 16px;
+  font-weight: bold;
+  font-display: uppercase;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 form button:hover {
-  background-color: #005fa3;
+  background-color: rgb(247, 186, 186);
 }

@@ -13,7 +13,7 @@
   <%- include('partials/navbar', { page: '/lego/addSet' }) %>
 
   <div class="container mt-5">
-    <h1>Add a New Lego Set</h1>
+    <h1>Add a New Lego Set !</h1>
 
     <!-- 
       Lego Set Form
@@ -23,8 +23,9 @@
     <form action="/lego/addSet" method="POST">
 
       <!-- Set Name Input -->
-      <label for="name">Set Name</label>
+      <label style="color:rgb(255,213,157);" for="name">Set Name</label>
       <input 
+        style="color: darkred; font-weight: bold;"
         name="name" 
         type="text" 
         id="name" 
@@ -33,8 +34,9 @@
       />
 
       <!-- Year Input -->
-      <label for="year">Year</label>
+      <label style="color:rgb(255,213,157);" for="year">Year</label>
       <input 
+        style="color: darkred; font-weight: bold;"
         name="year" 
         type="number" 
         id="year" 
@@ -43,8 +45,9 @@
       />
 
       <!-- Number of Parts Input -->
-      <label for="num_parts">Number of Parts</label>
+      <label style="color:rgb(255,213,157);" for="num_parts">Number of Parts</label>
       <input 
+        style="color: darkred; font-weight: bold;"
         name="num_parts" 
         type="number" 
         id="num_parts" 
@@ -53,8 +56,9 @@
       />
 
       <!-- Image URL Input -->
-      <label for="img_url">Image URL</label>
+      <label style="color:rgb(255,213,157);" for="img_url">Image URL</label>
       <input 
+        style="color: darkred; font-weight: bold;"
         name="img_url" 
         type="url" 
         id="img_url" 
@@ -63,16 +67,17 @@
       />
 
       <!-- Theme Dropdown (Populated dynamically from themes array) -->
-      <label for="theme_id">Theme</label>
-      <select name="theme_id" id="theme_id" required>
+      <label style="color:rgb(255,213,157);" for="theme_id">Theme</label>
+      <select style="color: rgb(211, 51, 51); font-weight: bold; text-transform: uppercase;" name="theme_id" id="theme_id" required>
         <% themes.forEach(theme => { %>
           <option value="<%= theme.id %>"><%= theme.name %></option>
         <% }) %>
       </select>
 
       <!-- Set Number Input (Unique ID for each set) -->
-      <label for="set_num">Set Number</label>
+      <label style="color:rgb(255,213,157);" for="set_num">Set Number</label>
       <input 
+        style="color: darkred; font-weight: bold;"
         name="set_num" 
         type="text" 
         id="set_num" 
