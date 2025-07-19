@@ -3,27 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <title>Add Set</title>
+
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="/css/theme.css" />
 </head>
 <body>
+
+  <!-- Reusable navbar partial -->
   <%- include('partials/navbar', { page: '/lego/addSet' }) %>
 
   <div class="container mt-5">
     <h1>Add a New Lego Set</h1>
 
+    <!-- 
+      Lego Set Form
+      This form submits data to /lego/addSet using POST.
+      The data is handled in server.js, and will call legoData.addSet().
+    -->
     <form action="/lego/addSet" method="POST">
-      <input name="name" type="text" placeholder="Set Name" required /><br />
-      <input name="year" type="number" placeholder="Year" required /><br />
-      <input name="num_parts" type="number" placeholder="Number of Parts" required /><br />
-      <input name="img_url" type="url" placeholder="Image URL" required /><br />
-      <select name="theme_id" required>
+
+      <!-- Set Name Input -->
+      <label for="name">Set Name</label>
+      <input 
+        name="name" 
+        type="text" 
+        id="name" 
+        placeholder="e.g. Hogwarts Express" 
+        required 
+      />
+
+      <!-- Year Input -->
+      <label for="year">Year</label>
+      <input 
+        name="year" 
+        type="number" 
+        id="year" 
+        placeholder="e.g. 2022" 
+        required 
+      />
+
+      <!-- Number of Parts Input -->
+      <label for="num_parts">Number of Parts</label>
+      <input 
+        name="num_parts" 
+        type="number" 
+        id="num_parts" 
+        placeholder="e.g. 1234" 
+        required 
+      />
+
+      <!-- Image URL Input -->
+      <label for="img_url">Image URL</label>
+      <input 
+        name="img_url" 
+        type="url" 
+        id="img_url" 
+        placeholder="Paste a valid image link" 
+        required 
+      />
+
+      <!-- Theme Dropdown (Populated dynamically from themes array) -->
+      <label for="theme_id">Theme</label>
+      <select name="theme_id" id="theme_id" required>
         <% themes.forEach(theme => { %>
           <option value="<%= theme.id %>"><%= theme.name %></option>
         <% }) %>
-      </select><br />
-      <input name="set_num" type="text" placeholder="Set Number" required /><br />
+      </select>
+
+      <!-- Set Number Input (Unique ID for each set) -->
+      <label for="set_num">Set Number</label>
+      <input 
+        name="set_num" 
+        type="text" 
+        id="set_num" 
+        placeholder="e.g. 76405" 
+        required 
+      />
+
+      <!-- Submit Button -->
       <button type="submit">Add Set</button>
     </form>
   </div>
+
 </body>
 </html>

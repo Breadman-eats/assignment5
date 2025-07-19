@@ -133,7 +133,47 @@ p {
   font-family: 'Bitcount Grid Double', monospace;
 }
 
-/* Optional override for muted text */
+/* ========================
+   Optional override for muted text 
+======================== */
 .text-muted {
   color: #999 !important;
+}
+
+
+/* INPUT BUTTONS STYLES */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005fa3;
 }
