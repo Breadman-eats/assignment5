@@ -3,36 +3,78 @@
 <head>
   <title>Lego Collection</title>
   <link rel="stylesheet" href="/css/theme.css" />
+  <style>
+    th {
+      padding-left: 25px;
+    }
+  </style>
 </head>
 <body>
   <%- include('partials/navbar', { page: '/lego/sets' }) %>
 
   <h1>Lego Collection</h1>
 
-  <p>Filter by theme: 
+  <p style="margin-left:20px">Filter by theme: 
     <a href="/lego/sets?theme=technic">Technic</a> | 
     <a href="/lego/sets?theme=classic">Classic</a> | 
     <a href="/lego/sets">All</a>
   </p>
 
-  <table border="1">
-    <thead>
+  <table border="3" style="width:98%; margin-left:10px; margin-right:20px; text-align:center;">
+  <style>
+    .name-cell {
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .partnum-cell,
+    .theme-cell,
+    .year-cell,
+    .parts-cell,
+    .details-cell {
+      max-width: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .img-cell {
+      max-width: 120px;
+    }
+  </style>
+
+  <thead>
+    <tr>
+      <th style="padding-left: 40px; " class="img-cell">Image</th>
+      <th style="padding-left: 10px; " class="name-cell">Name</th>
+      <th style="padding-left: 10px; " class="partnum-cell">Part Number</th>
+      <th style="padding-left: 10px; " class="theme-cell">Theme</th>
+      <th style="padding-left: 10px; " class="year-cell">Year</th>
+      <th style="padding-left: 10px; " class="parts-cell">Parts</th>
+      <th style="padding-left: 10px; " class="details-cell">Details</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% sets.forEach(set => { %>
       <tr>
-        <th>Image</th><th>Name</th><th>Theme</th><th>Year</th><th>Parts</th><th>Details</th>
+        <td style="padding-left: 40px; " class="img-cell"><img src="<%= set.img_url %>" width="100" /></td>
+        <td class="name-cell" title="<%= set.name %>"><%= set.name %></td>
+        <td class="partnum-cell" title="<%= set.set_num %>"><%= set.set_num %></td>
+        <td class="theme-cell" title="<%= set.theme %>">
+          <a href="/lego/sets?theme=<%= set.theme %>"><%= set.theme %></a>
+        </td>
+        <td class="year-cell"><%= set.year %></td>
+        <td class="parts-cell"><%= set.num_parts %></td>
+        <td class="details-cell">
+          <a href="/lego/sets/<%= set.set_num %>">Details</a>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <% sets.forEach(set => { %>
-        <tr>
-          <td><img src="<%= set.img_url %>" width="100" /></td>
-          <td><%= set.name %></td>
-          <td><a href="/lego/sets?theme=<%= set.theme %>"><%= set.theme %></a></td>
-          <td><%= set.year %></td>
-          <td><%= set.num_parts %></td>
-          <td><a href="/lego/sets/<%= set.set_num %>">Details</a></td>
-        </tr>
-      <% }) %>
-    </tbody>
-  </table>
+    <% }) %>
+  </tbody>
+</table>
+
 </body>
 </html>

@@ -8,14 +8,14 @@
   <%- include('partials/navbar', { page: '' }) %>
 
   <h1><%= set.name %></h1>
-  <p>Below, you will find detailed information about the set:</p>
+  <p style="margin-left: 10px;">Below, you will find detailed information about the set:</p>
 
-  <img src="<%= set.img_url %>" width="300" /><br />
-  <p>Year: <%= set.year %></p>
-  <p>Theme: <%= set.theme %></p>
-  <p>Parts: <%= set.num_parts %></p>
+  <img style="margin-left: 10px;" src="<%= set.img_url %>" width="300" /><br />
+  <p style="margin-left: 10px;">Year: <%= set.year %></p>
+  <p style="margin-left: 10px;">Theme: <%= set.theme %></p>
+  <p style="margin-left: 10px;">Parts: <%= set.num_parts %></p>
 
-  <a href="/lego/deleteSet/<%= set.set_num %>">Delete This Set</a> |
-  <a href="#" onclick="history.back(); return false;">Back</a>
+  <a style="margin-left: 10px;" href="/lego/deleteSet/<%= set.set_num %>">Delete This Set</a> |
+  <a style="margin-left: 10px;" href="#" onclick="history.back(); return false;">Back</a>
 </body>
 </html>
